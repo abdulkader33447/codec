@@ -7,3 +7,22 @@
 .roboto {
   font-family: "Roboto", sans-serif;
 }
+
+.navbar-hamburger-btn {
+  background: transparent;
+  border: none;
+  font-size: 2rem;
+  padding: 0.25rem;
+  cursor: pointer;
+}
+
+.mobile-menu {
+  transition: max-height 0.3s ease-in-out;
+  overflow: hidden;
+}
+.mobile-menu.open {
+  max-height: 100vh;
+}
+.mobile-menu.closed {
+  max-height: 0;
+}
