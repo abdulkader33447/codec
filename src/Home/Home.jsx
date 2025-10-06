@@ -1,8 +1,8 @@
-import React from 'react';
+
 
 const Home = () => {
   return (
-    <div>
+    <div className='roboto min-h-screen'>
       <h1>Home</h1>
       
     </div>
