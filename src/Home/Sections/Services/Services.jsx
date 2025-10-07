@@ -65,7 +65,7 @@ const Services = () => {
         </motion.p>
 
         {/* Service Cards */}
-        <div className="grid md:grid-cols-3 gap-8 mt-8">
+        <div className="grid lg:grid-cols-3 md:grid-cols-2 gap-8 mt-8">
           {services.map((service, index) => (
             <motion.div
               key={index}

@@ -1,5 +1,6 @@
 import About from "./Sections/About/About";
 import Hero from "./Sections/Hero/Hero";
+import Portfolio from "./Sections/Portfolio/Portfolio";
 import Resume from "./Sections/Resume/Resume";
 import Services from "./Sections/Services/Services";
 
@@ -10,6 +11,7 @@ const Home = () => {
       <About />
       <Services />
       <Resume />
+      <Portfolio />
     </div>
   );
 };
