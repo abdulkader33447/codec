@@ -1,4 +1,5 @@
 import About from "./Sections/About/About";
+import Feedback from "./Sections/Feedback/Feedback";
 import Hero from "./Sections/Hero/Hero";
 import Portfolio from "./Sections/Portfolio/Portfolio";
 import Resume from "./Sections/Resume/Resume";
@@ -12,6 +13,7 @@ const Home = () => {
       <Services />
       <Resume />
       <Portfolio />
+      <Feedback />
     </div>
   );
 };
