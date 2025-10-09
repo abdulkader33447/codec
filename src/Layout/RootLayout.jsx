@@ -6,7 +6,7 @@ const RootLayout = () => {
   const [loading, setLoading] = useState(true);
 
   useEffect(() => {
-    const timer = setTimeout(() => setLoading(false), 1000); // 2s loader
+    const timer = setTimeout(() => setLoading(false), 500); // 2s loader
     return () => clearTimeout(timer);
   }, []);
 

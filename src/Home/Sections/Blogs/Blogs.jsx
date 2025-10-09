@@ -148,7 +148,7 @@ const Blogs = () => {
       </div>
 
       {/* Custom Animations */}
-      <style jsx>{`
+      <style>{`
         @keyframes fadeInDown {
           from {
             opacity: 0;
