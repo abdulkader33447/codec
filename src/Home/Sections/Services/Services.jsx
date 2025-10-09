@@ -32,9 +32,9 @@ const Services = () => {
   ];
 
   return (
-    <div className="bg-[#333333] py-12" ref={ref}>
+    <div className="bg-[#333333] py-20" ref={ref}>
       <div className="max-w-[1320px] w-11/12 mx-auto text-white">
-        {/* Title */}
+        {/* header */}
         <motion.h1
           initial={{ opacity: 0, y: 40 }}
           animate={inView ? { opacity: 1, y: 0 } : {}}

@@ -1,4 +1,5 @@
 import { motion } from "framer-motion";
+import { useInView } from "react-intersection-observer";
 
 const Resume = () => {
   const itemVariants = {
@@ -10,25 +11,39 @@ const Resume = () => {
     },
   };
 
+  // scroll detection
+  const { ref, inView } = useInView({
+    threshold: 0.2,
+    triggerOnce: true,
+  });
+
   return (
-    <div className="bg-[#312F2F] py-12">
+    <div className="bg-[#312F2F] py-20" ref={ref}>
       <div className="max-w-[1320px] w-11/12 mx-auto text-[#cccccc]">
+        {/* animated header */}
         <motion.h1
+          initial={{ opacity: 0, y: 40 }}
+          animate={inView ? { opacity: 1, y: 0 } : {}}
+          transition={{ duration: 0.6 }}
           className="text-2xl text-center font-semibold"
-          initial={{ opacity: 0, y: -20 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.5 }}
         >
           Our Resume
         </motion.h1>
-        <div className="relative border-b-2 border-[#FFBD39] w-26 mx-auto my-3 origin-center">
+
+        <motion.div
+          initial={{ scaleX: 0 }}
+          animate={inView ? { scaleX: 1 } : {}}
+          transition={{ duration: 0.6, ease: "easeOut" }}
+          className="relative border-b-2 border-[#FFBD39] w-26 mx-auto my-3 origin-center"
+        >
           <span className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 bg-white border-[3px] border-[#FFBD39] p-1 rounded-full"></span>
-        </div>
+        </motion.div>
+
         <motion.p
+          initial={{ opacity: 0 }}
+          animate={inView ? { opacity: 1 } : {}}
+          transition={{ duration: 0.7, delay: 0.2 }}
           className="text-center mb-8"
-          initial={{ opacity: 0, y: -20 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.5, delay: 0.2 }}
         >
           Etiam suscipit ante at sem facilisis, id sagittis nunc aliquet.
           Vivamus sodales elementum pharetra. Cras dignissim justo <br /> eu

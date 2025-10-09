@@ -1,8 +1,24 @@
 import { motion } from "framer-motion";
 import image from "../../../assets/hero 1.png";
 import DirectionHoverButton from "../../../Components/DirectionHoverBtn/DirectionHoverBtn";
+import Swal from "sweetalert2";
 
 const Hero = () => {
+  const hireMe = () => {
+    Swal.fire({
+      title: "This is just a demo website!",
+      icon: "success",
+      timer: 3500,
+    });
+  };
+
+  const cv = () => {
+    Swal.fire({
+      title: "This is just a demo website!",
+      icon: "success",
+      timer: 3500,
+    });
+  };
   return (
     <div className="bg-[#333333] pt-10">
       <div className="max-w-[1320px] w-11/12 mx-auto min-h-screen text-white">
@@ -23,16 +39,16 @@ const Hero = () => {
             </p>
 
             <div className="flex gap-4 mt-6">
-              <DirectionHoverButton bgColor="#7B68EE">
+              <DirectionHoverButton bgColor="#7B68EE" onClick={hireMe}>
                 <span className="text">Hire me</span>
               </DirectionHoverButton>
 
-              <DirectionHoverButton bgColor="#FFBD39">
+              <DirectionHoverButton bgColor="#FFBD39" onClick={cv}>
                 <span className="text">Download CV</span>
               </DirectionHoverButton>
             </div>
           </motion.div>
-          
+
           <motion.div
             initial={{ opacity: 0, y: 50 }}
             animate={{ opacity: 1, y: 0 }}

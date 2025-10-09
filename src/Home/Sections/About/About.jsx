@@ -5,6 +5,7 @@ import { GoGlobe } from "react-icons/go";
 import { IoLogoInstagram } from "react-icons/io";
 import DirectionHoverButton from "../../../Components/DirectionHoverBtn/DirectionHoverBtn";
 import { motion } from "framer-motion";
+import Swal from "sweetalert2";
 
 const About = () => {
   const { ref: textRef, inView: textInView } = useInView({
@@ -17,8 +18,24 @@ const About = () => {
     triggerOnce: true,
   });
 
+  const work = () => {
+    Swal.fire({
+      title: "This is just a demo website!",
+      icon: "success",
+      timer: 3500,
+    });
+  }
+
+   const cv = () => {
+    Swal.fire({
+      title: "This is just a demo website!",
+      icon: "success",
+      timer: 3500,
+    });
+  }
+
   return (
-    <div className="bg-[#312F2F] py-12">
+    <div className="bg-[#312F2F] py-20">
       <div className="max-w-[1320px] w-11/12 mx-auto text-white">
         <div className="grid md:grid-cols-2 items-center gap-8">
 
@@ -92,10 +109,10 @@ const About = () => {
 
             {/* Buttons */}
             <div className="flex gap-4 mt-6">
-              <DirectionHoverButton bgColor="#7B68EE">
+              <DirectionHoverButton bgColor="#7B68EE" onClick={work}>
                 <span className="text">My Work</span>
               </DirectionHoverButton>
-              <DirectionHoverButton bgColor="#FFBD39">
+              <DirectionHoverButton bgColor="#FFBD39" onClick={cv}>
                 <span className="text">Download CV</span>
               </DirectionHoverButton>
             </div>
