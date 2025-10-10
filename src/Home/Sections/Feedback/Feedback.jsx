@@ -113,8 +113,8 @@ const Feedback = () => {
           className="text-center mb-8"
         >
           Etiam suscipit ante at sem facilisis, id sagittis nunc aliquet.
-          Vivamus sodales elementum pharetra. Cras dignissim justo eu accumsan
-          vulputate.
+          Vivamus sodales elementum pharetra. Cras dignissim justo <br /> eu
+          accumsan vulputate.
         </motion.p>
 
         {/* Swiper Slider */}
